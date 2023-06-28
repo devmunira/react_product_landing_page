@@ -1,0 +1,211 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 5rem 0 0;
+}
+
+/* Left Side CSS */
+.sides,
+.traffic {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-start: auto;
+    z-index: 9999;
+}
+
+.text1 {
+    width: min-content;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.text2 > :first-child {
+    width: min-content;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.text2 > :last-child {
+    display: block;
+}
+
+/* Middle Side CSS */
+.middle {
+    display: flex;
+    align-items: baseline;
+    justify-content: center !important;
+    position: relative;
+    width: 100%;
+}
+
+.middle img {
+    width: 30rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.blueArea {
+    position: absolute;
+    bottom: 0;
+    height: 30rem;
+    width: 30rem;
+    z-index: -99;
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 50%;
+}
+
+.signUp {
+    position: absolute;
+    bottom: 25%;
+    display: flex;
+    right: -20px;
+    gap: 10px;
+    align-items: center;
+}
+.signUp > :first-child {
+    background-color: floralwhite;
+    border: 5px solid #444;
+    border-radius: 50%;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+.signUp > :last-child {
+    box-shadow: var(--shadow1);
+    background-color: white;
+    padding: 8px 30px;
+    border-radius: 20px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.signUp > .text > :first-child {
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: capitalize;
+    display: block;
+    width: 7rem;
+    line-height: 20px;
+}
+.signUp > .text > :last-child {
+    font-weight: 200;
+    font-size: 20px;
+    text-transform: capitalize;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.traffic {
+    text-align: right !important;
+}
+.traffic > :first-child {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.traffic > :last-child {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width : 640px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 5rem 0 0;
+    }
+
+    .text1 {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .text2 > :first-child {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .signUp {
+        right: -10px;
+        gap: 5px;
+    }
+    .signUp > :first-child {
+        font-size: 14px;
+        height: 20px;
+        width: 20px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    .signUp > :last-child {
+        padding: 5px 10px;
+        border-radius: 10px;
+        line-height: 20px;
+        gap: 10px;
+    }
+    .signUp > .text > :first-child {
+        font-weight: 400;
+        font-size: 10px;
+        text-transform: capitalize;
+        display: block;
+        width: 6rem;
+        line-height: 20px;
+    }
+    .signUp > .text > :last-child {
+        font-weight: 200;
+        font-size: 20px;
+        text-transform: capitalize;
+        border: 1px solid #000;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .traffic > :first-child {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    .traffic > :last-child {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .middle img {
+        width: 20rem;
+        bottom: 50%;
+    }
+
+    .middle .blueArea {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .middle {
+        bottom: 50%;
+    } 
+}
+
+@media (min-width : 300px) and (max-width : 1023px){
+    .middle img {
+        width: 25rem;
+        bottom: 25%;
+    }
+
+    .middle .blueArea {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .middle {
+        bottom: 25%;
+    } 
+}
+

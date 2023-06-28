@@ -1,0 +1,89 @@
+.container {
+    padding: 1rem 0;
+}
+
+.topbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: flex-end;
+    gap: 4rem;
+    width: 100%;
+}
+
+.topbar .img {
+    justify-self: center;
+}
+
+.topbar .img > img {
+    width: 25rem;
+}
+
+.topbar > .textOne h3,
+.topbar > .textTwo h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.topbar > .textOne p {
+    line-height: 1.5rem;
+    width: 80%;
+    display: block;
+    font-size: 14px;
+    font-weight: light;
+
+}
+
+.topbar > .textTwo {
+    text-align: right;
+}
+
+.reviews {
+    text-align: center;
+    position: relative;
+    margin: 3rem 0;
+}
+
+.review img {
+    width: 5rem;
+    position: absolute;
+    top: -40px;
+    left: 40%;
+}
+
+.testimonial {
+    width: 100%;
+
+}
+
+.tswiper {
+    width: 25%;
+    background-color: white !important;
+    border-radius: 10px;
+    padding: 1rem;
+}
+@media (min-width : 300px) and (max-width : 1023px) {
+    .topbar {
+        align-items: center;
+    }
+
+    .topbar .img > img {
+        width: 18rem;
+    }
+
+    .topbar > .textOne h3,
+    .topbar > .textTwo h3 {
+        display: none;
+    }
+
+    .topbar > .textOne p {
+        display: none;
+
+    }
+
+    .textTwo{
+        display: none;
+    } 
+
+
+}
